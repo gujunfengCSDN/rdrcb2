@@ -1,0 +1,95 @@
+<!--学习任务页面-->
+<div id="studyTaskLearningDetailHtmlPage" data-page="studyTaskLearningDetailHtml" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a id="backId" href="#" class="back link" ><i class="icon icon-back"></i><span>返回</span></a>
+            </div>
+            <div id="main_navbar_title" class="center sliding">学习任务页面</div>
+            <div id="main_navbar_menu" class="right">
+                <a id="proCloseAndOpenBtn" href="#" class="link">
+                    <!--<span class="spread"></span>-->
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content" style="overflow-x: hidden;">
+        <!--自主学习页面-->
+        <div style="height: 100%;width: 100%;">
+            <div style="width: 100%;height: 20%;background-image: url('images/index/background.png');background-size:100% 100%;">
+                <!--<img src="image/personnelSalary/personnelBackground.png" style="height: 100%;width: 100%;">-->
+                <div style="text-align: center;color: white;font-weight: bold;padding-top: 55px;font-size: 16px">
+                </div>
+            </div>
+            <!--页面信息-->
+            <div class="card" style="background-color: white;height: 20%;top: -14%;position: relative;border-radius: 6px;">
+                <div class="row" style="position: absolute;height: 50%;width: 100%;">
+                    <div class="col-100" style="height: 100%;display: flex;align-items: center;justify-content: center;">
+                        <div style="text-align: center;">
+                            <span id="studyTitleName" style="font-weight: bold;font-size: 16px;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="position: absolute;height: 50%;width: 100%;top: 50%;">
+                    <div class="col-70" style="display: flex;align-items: center;height: 100%;">
+                        <img src="images/exam/iconTime.png" style="height: 50%;margin-left: 4%;">
+                        <span style="margin-left: 4%;">已学习</span>
+                        <span id="studyHourTime" style="margin-left: 4%;">00</span>
+                        <span>:</span>
+                        <span id="studyMinuteTime">00</span>
+                        <span>:</span>
+                        <span id="studySecondTime">00</span>
+                        <span id="startButton" style="margin-left: 12%;color: green;font-weight: bold;font-size: 15px;">开始</span>
+                        <span id="commitButton" style="margin-left: 12%;color: red;font-weight: bold;font-size: 15px;display: none;">提交</span>
+                    </div>
+                    <div id="fileGet" class="col-30" style="display: flex;align-items: center;height: 100%;">
+                        <img src="images/exam/iconFile.png" style="height: 50%;margin-left: 4%;">
+                        <span style="margin-left: 4%;">附件</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="height: 50%;position: relative;top: -12%;border-radius: 6px;">
+                <div style="text-align: center;padding-top: 20px;">
+                    <span id="studyContent" style="font-size: 14px;color: #000;font-weight: bold;"></span>
+                    <div id="studyVedioContent" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div id="proToolbar" class="toolbar">-->
+    <!--<div id="butto" class="toolbar-inner row" style="padding: 0px;box-shadow: 2px -3px 5px #E3E3E3">-->
+    <!--<a id="ty" href="#" class="button button-fill proAgreeButton" style="margin: auto;width: 22%;background-color: #59ca6e;display: none">同意</a>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="popup" id="fileDetail">
+        <div class="view navbar-fixed">
+            <div class="pages">
+                <div data-page="calendar" class="page no-navbar">
+                    <div class="page-content" style="overflow-x: hidden;background-color: #f7f7f8">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="left">
+                                    <a id="closeSpan1" href="#" class="close-popup link" style="margin-left:5px;">
+                                        <i class="icon icon-back"></i>
+                                        <span>返回</span>
+                                    </a>
+                                </div>
+                                <div id="main_navbar_title6" class="sliding center" style="font-weight:400">附件列表</div>
+                            </div>
+                        </div>
+                        <div class="list-block accordion-list" style="margin-top: 0px;margin-bottom: 20px">
+                            <div class="accordion-item accordion-item-expanded">
+                                <div class="accordion-item-content">
+                                    <div class="row no-gutter">
+                                        <div id="studyFileContent" style="width: 100%;height: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

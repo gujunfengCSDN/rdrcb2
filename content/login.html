@@ -1,0 +1,64 @@
+<div data-page="login-screen" class="page no-navbar no-toolbar no-swipeback" >
+    <div id="loginDiv" class="page-content login-screen-content" style="width: 100%;height: 100%;overflow:hidden">
+        <div class="login-screen-title" align="center" style="width: 90%;padding-top: 16%;">
+            <img id="bglog" src="images/login/titleIconLogo.png" style="width:100%;">
+            <div style="font-size: 18px;font-weight: bold;">如e令欢迎您</div>
+        </div>
+        <div style="margin-top: 16%;">
+            <form id="formLogin" >
+                <div class="list-block" style="width:80%; margin-top: 0px;margin-bottom: 0px;height:45%;">
+                    <ul id="ulTest" style="height: 100%;margin-top: 10px;">
+                        <li class="item-content" style="height: 35%">
+                            <div class="item-inner">
+                                <div class="item-media" style="margin-left: 10%"><i class="icon logname"></i></div>
+                                <div class="" style="width: 80%">
+                                    <div class="item-input">
+                                        <input id="loginName" class="center" type="text" name="username"
+                                               style="margin-left:20%;text-align: left;font-size: 15px;"  placeholder="请输入您的登录账号" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content" style="height: 35%">
+                            <div class="item-inner">
+                                <div class="item-media" style="margin-left: 10%"><i class="icon password"></i></div>
+                                <div class="" style="width: 80%">
+                                    <div id="divPwd" class="item-input">
+                                        <input id="PasswordS2" type="password" name="PasswordS2" placeholder=""
+                                               style="margin-left:20%;text-align: left;font-size: 15px;"  value=""/>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="serverSelect" class="item-content" style="height: 30%;display:none">
+                            <div class="item-inner">
+                                <div class="item-media" style="margin-left: 10%"><i class="icon server"></i></div>
+                                <!--<div class="item-title label">用户名:</div>-->
+                                <div class="" style="width: 80%">
+                                    <div class="item-input" style="margin-left:40px">
+                                        <select id="serverIp">
+                                            <option value="testFormal">模拟正式服 mmptj.wjrcb.com</option>
+                                            <option value="test"> 测试服 222.92.218.141</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-block" style="height:6%;margin-top: 16%;">
+                    <ul style="height: 100%">
+                        <li style="height: 100%;">
+                            <div class="item-link list-button" style="padding: 0 40px">
+                                <a id="btnLogin" href="#" class="button button-big button-fill color-red" style="background-color: orange">登录</a>
+                                <a id="btnReload" href="#" class="button button-big button-fill color-red" style="background-color: orange;display:none">重新加载</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

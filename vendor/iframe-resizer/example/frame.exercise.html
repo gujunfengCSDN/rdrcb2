@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frame exercise</title>
+    <meta name="description" content="iFrame message passing test">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+<h2>exercise</h2>
+<div>
+    <iframe src="test01.html"></iframe>
+</div>
+</body>
+
+<!-- MDN PolyFils for IE8 (This is not normally needed if you use the jQuery version) -->
+<!--[if lte IE 8]>
+<script type="text/javascript" src="../js/ie8.polyfils.min.js"></script>
+<![endif]-->
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/iframeResizer.min.js"></script>
+<script type="text/javascript">
+    /*
+     * If you do not understand what the code below does, then please just use the
+     * following call in your own code.
+     *
+     *   iFrameResize({log:true});
+     *
+     * Once you have it working, set the log option to false.
+     */
+    iFrameResize({
+        log:true,
+        inPageLinks:true,
+        messageCallback: function (messageData) {
+           alert(messageData.message)
+            //document.getElementsByTagName('iframe')[0].iFrameResizer.sendMessage('Hello back from parent page');
+            document.getElementsByTagName('iframe')[0].iFrameResizer.sendMessage('lfjldfjlajfoiefldjskjfio11111111111111');
+        }
+    });
+</script>
+</html>

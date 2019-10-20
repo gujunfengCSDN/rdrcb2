@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>合规</title>
+    <!--开发用framework7.ios.css，发布用framework7.ios.min.css-->
+    <link rel="stylesheet" href="vendor/framework7/css/framework7.ios.min.css">
+    <!--<link rel="stylesheet" href="vendor/framework7/css/framework7.ios.min.css">-->
+
+    <link rel="stylesheet" href="vendor/framework7/css/framework7.ios.colors.css">
+    <link rel="stylesheet" href="vendor/framework7/css/framework7-icons.css">
+    <!--F7demo样式-->
+    <link rel="stylesheet" href="vendor/framework7/css/kitchen-sink.css">
+    <!-- 自定义样式-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="css/mbiStyle.css">
+    <link rel="stylesheet" href="css/dropkick.css">
+</head>
+<body class="">
+<!-- Status bar overlay for fullscreen mode-->
+<div id="statusbar" class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay"></div>
+<!-- Left panel with reveal effect-->
+<div class="panel panel-left panel-reveal">
+    <div class="content-block">
+        <p>Left panel content goes here</p>
+    </div>
+</div>
+<!-- Right panel with cover effect-->
+<div class="panel panel-right panel-cover">
+    <div class="content-block">
+        <p>Right panel content goes here</p>
+    </div>
+</div>
+
+<!-- Views, and they are tabs-->
+<!-- We need to set "toolbar-through" class on it to keep space for our tab bar-->
+<div id="rootView" class="views tabs toolbar-through">
+    <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
+    <!--首页-->
+    <div id="view-1" class="view view-main tab active ">
+        <div class="pages navbar-through">
+            <!-- Page, data-page contains page name-->
+            <div data-page="index-1" class="page with-subnavbar">
+                <div id="navbar1" class="navbar style-navbar-background">
+                    <div class="navbar-inner">
+                        <div class="left">
+                        </div>
+                        <div id="main_navbar_title1" class="sliding center style-common-text" style="font-weight:400;display: none">
+                            如e令
+                        </div>
+
+                        <div id="main_navbar_menu1" class="right">
+                            <span id="main_navbar_watermark1" class="style-navbar-watermark" style="font-size: 10px;"> </span>
+                            <a href="#" class="link ">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content" style="overflow-x: hidden;padding-top: 44px;">
+                    <!--详情-->
+                    <div style="width: 100%;">
+                        <div id="imageContent" style="width: 100%;">
+                            <!--<img src="image/personnelSalary/personnelBackground.png" style="height: 100%;width: 100%;">-->
+                            <!--<div style="text-align: center;color: white;font-weight: bold;font-size: 16px">-->
+                                <!--<span style="letter-spacing: 20px;">如东农商银行</span>-->
+                                <img src="images/index/xiaoguoImage.png" style="height: 100%;width: 100%;">
+                            <!--</div>-->
+                        </div>
+                        <!--页面信息-->
+                        <div id="seclectTime">
+                            <div class="list-block " style="margin: 0;">
+                                <ul>
+                                    <li>
+                                        <div class="row no-gutter style-cardContent-div">
+                                            <div class="col-50">
+                                                <div class="item-content" style="padding-left: 20px">
+                                                    <div class="item-inner" style="padding-right: 20px">
+                                                        <div class="item-input" style="text-align: -webkit-center;height: 100%;display: flex;align-items: center;justify-content: center;">
+                                                            <input type="text" class="style-common-text" style="height: 80%;background-color: #f7f7f8;font-size: 14px;text-align: center;width: 90%;margin-left: 10px;border: 2px solid #f7f7f8" readonly value="请选择时间">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-50">
+                                                <div class="list-block" style="margin:0px 0px;height: 50%;">
+                                                    <div class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-input" style="text-align: -webkit-center;height: 100%;display: flex;align-items: center;justify-content: center;">
+                                                                <input id="datePicker" style="height: 78%;display: block;margin-top: 0px;text-align:center;width: 80%;font-size: 14px;background-color: #f7f7f8;color: #000000;border: 1px solid #f7f7f8">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="firstContent" style="background-color: white;margin: 3% 2%;">
+                            <div class="row no-gutter " style="height: 50%;border-bottom: 1px solid #d9d9e4;">
+                                <div class="col-50" style="height: 100%;border-right: 1px solid #d9d9e4;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon1.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: left;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">各项贷款占比</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center"><span id="gxdkzb" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-50" style="height: 100%;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon2.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">新增可贷资金用于当地比例</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center"><span id="xzkdzjyyddbl" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter" style="height: 50%;border-bottom: 1px solid #d9d9e4;">
+                                <div class="col-50" style="height: 100%;border-right: 1px solid #d9d9e4;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon7.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">涉农及小微企业贷款占比</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center"><span id="snjxwqydkzb" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-50" style="height: 100%;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon8.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">大额贷款占比</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center"><span id="dedkzb" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="secondContent" style="background-color: white;height: 60%;margin: 3% 2%;">
+                            <div class="row no-gutter " style="height: 40%;border-bottom: 1px solid #d9d9e4;">
+                                <div class="col-50" style="height: 100%;border-right: 1px solid #d9d9e4;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon9.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">涉农及小微企业贷款增速</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center"><span id="snyxwqydkzs" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-50" style="height: 100%;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon10.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">农户与小微企业贷款增速</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center"><span id="nhyxwqyyxfgm" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter" style="height: 35%;border-bottom: 1px solid #d9d9e4;">
+                                <div class="col-50" style="height: 100%;border-right: 1px solid #d9d9e4;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 13px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon11.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">农户授信覆盖面</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center">
+                                                <span id="nhsxfgm" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-50" style="height: 100%;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 14px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon12.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">小微企业授信覆盖面</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center"><span id="xwqysxfgm" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter" style="height: 25%;border-bottom: 1px solid #d9d9e4;">
+                                <div class="col-100" style="height: 100%;border-right: 1px solid #d9d9e4;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%;display: flex;align-items: center;">
+                                            <div class="col-50">
+                                                <div class="row col-100" style="height: 50%;">
+                                                    <div class="col-20" style="text-align: center;height: 100%;">
+                                                        <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon13.png">
+                                                    </div>
+                                                    <div class="col-80" style="text-align: center;">
+                                                        <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">普惠型农户贷款和普惠型小微企业贷款(扣除重复部分)增速</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-50" style="text-align:center;">
+                                                <span id="phxnhhxwdkzs" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="threeContent" style="background-color: white;height: 40%;margin: 3% 2%;">
+                            <div class="row no-gutter " style="height: 65%;border-bottom: 1px solid #d9d9e4;">
+                                <div class="col-50" style="height: 100%;border-right: 1px solid #d9d9e4;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon14.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: left;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">农户建档评级覆盖面</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center">
+                                                <span id="nhjdpjfgm" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-50" style="height: 100%;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;text-align:left">
+                                                <div class="col-20" style="text-align: center;">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon15.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">小微企业建档评级覆盖面</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center"><span id="xwqyjdpjfgm" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter" style="height: 35%;border-bottom: 1px solid #d9d9e4;">
+                                <div class="col-100" style="height: 100%;border-right: 1px solid #d9d9e4;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%;display: flex;align-items: center;">
+                                            <div class="col-50">
+                                                <div class="row col-100" style="height: 50%;">
+                                                    <div class="col-20" style="text-align: center;height: 100%;">
+                                                        <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon16.png">
+                                                    </div>
+                                                    <div class="col-80" style="text-align: center;">
+                                                        <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">电子交易替代率</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-50" style="text-align:center;">
+                                                <span id="dzjytdl" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="fourContent" style="background-color: white;height: 48%;margin: 3% 2%;">
+                            <div class="row no-gutter " style="height: 50%;border-bottom: 1px solid #d9d9e4;">
+                                <div class="col-50" style="height: 100%;border-right: 1px solid #d9d9e4;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;padding:0% 6%;text-align:left">
+                                                <div class="col-20">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon3.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">涉农贷款不良率容忍度</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center">
+                                                <span id="snbll" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-50" style="height: 100%;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;padding:0% 6%;text-align:left">
+                                                <div class="col-20">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon4.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">小微企业贷款不良率容忍度</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center">
+                                                <span id="xwqydkbll" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutter " style="height: 50%;border-bottom: 1px solid #d9d9e4;">
+                                <div class="col-50" style="height: 100%;border-right: 1px solid #d9d9e4;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;padding:0% 6%;text-align:left">
+                                                <div class="col-20">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon5.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">支农支小业务绩效考核倾斜度</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center">
+                                                <span id="znzxywjxkhzbqz" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-50" style="height: 100%;">
+                                    <div class="indexDiv fullRect" style="">
+                                        <div class="row" style="height: 100%">
+                                            <div class="row col-100" style="margin-top: 15px;padding:0% 6%;text-align:left">
+                                                <div class="col-20">
+                                                    <img style="width:60%;height:60%;vertical-align:-webkit-baseline-middle" src="images/index/sqlIcon6.png">
+                                                </div>
+                                                <div class="col-80" style="text-align: center;">
+                                                    <span class="style-indexTitle-text" style="color:#000000;font-size: 106%;vertical-align:-webkit-baseline-middle">买断式转贴现占比</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-100" style="margin-top:-14px;text-align:center">
+                                                <span id="mdsztxzb" class="style-index-text" style="font-size:18px;display:block;margin-left:5px"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--学习-->
+    <div id="view-2" class="view tab">
+        <div class="pages navbar-through">
+            <div data-page="index-2" class="page with-subnavbar">
+                <div id="view2Navber" class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <!--<a id="bac" href="#" class="back link" ><i class="icon icon-back"></i><span>返回</span></a>-->
+                        </div>
+                        <div id="main_navbar_title" class="center sliding">学习</div>
+                        <div id="main_navba" class="right">
+                            <!--<a id="proCloseAndOpen" href="#" class="link">-->
+                            <!--<span class="spread"></span>-->
+                            <!--</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content" style="overflow-x: hidden;padding-top: 44px;">
+                    <!--详情-->
+                    <div style="height: 100%;width: 100%;">
+                        <!--<div style="width: 100%;height: 30%;background-image: url('images/index/background.png');background-size:100% 100%;">-->
+                            <!--&lt;!&ndash;<img src="image/personnelSalary/personnelBackground.png" style="height: 100%;width: 100%;">&ndash;&gt;-->
+                            <!--<div style="text-align: center;color: white;font-weight: bold;padding-top: 55px;font-size: 16px">-->
+                                <!--<span>学习与考试</span>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div id="imageViewContent" style="width: 100%;">
+                            <img src="images/index/backgroundStudyImage.jpg" style="height: 100%;width: 100%;">
+                        </div>
+                        <!--页面信息-->
+                        <div class="card" style="background-color: white;height: 40%;width: 94%;left: 3%;margin-left: 0px;">
+                            <div class="row" style="position: absolute;width: 100%;margin-top: 10%;">
+                                <div id="autodidacticism" class="col-33" style="">
+                                    <div style="height: 100%;width: 100%;text-align: center;">
+                                        <img src="images/exam/autodidacticism.png" style="height: 50%;width: 50%">
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <span style="">自主学习</span>
+                                    </div>
+                                </div>
+                                <div id="studyTask" class="col-33" style="">
+                                    <div style="height: 100%;width: 100%;text-align: center;position: relative;">
+                                        <img src="images/exam/studyTask.png" style="height: 50%;width: 50%;">
+                                        <div id="todoStudyCount" style="background-image: url('images/workTodo/backgroundCount.png');background-size: 100% 100%;position: absolute;top: 0px;left: 60%;color: white;padding: 2px 6px;min-width: 8%;display: none;"></div>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <span style="">学习任务</span>
+                                    </div>
+                                </div>
+                                <div id="examinations" class="col-33" style="">
+                                    <div style="height: 100%;width: 100%;text-align: center">
+                                        <img src="images/exam/examinations.png" style="height: 50%;width: 50%">
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <span style="">考试</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="position: absolute;width: 100%;margin-top: 38%;">
+                                <div id="weekExerice" class="col-33" style="">
+                                    <div style="height: 100%;width: 100%;text-align: center;">
+                                        <img src="images/exam/weekExerice.png" style="height: 50%;width: 50%">
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <span style="">每周一练</span>
+                                    </div>
+                                </div>
+                                <div class="col-33" style="">
+                                </div>
+                                <div class="col-33" style="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--待办-->
+    <div id="view-3" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div id="view3Navber" class="navbar">
+            <div class="navbar-inner style-navbar-background">
+                <div class="left">
+                    <a id="main_navbar_back3" href="#" class="link" style="margin-left:5px;opacity: 0">
+                        <i class="icon icon-back"></i>
+                        <span class="style-navbar-icon">返回</span>
+                    </a>
+                </div>
+                <div id="main_navbar_title3" class="sliding center style-common-text" style="font-weight:400">待办事项</div>
+                <div id="main_navbar_menu3" class="right">
+                    <span id="main_navbar_watermark3" class="style-navbar-watermark" style="font-size: 10px"> </span>
+                    <a id="selectBtn3" href="#" class="link style-navbar-a" style="display: none">
+                        <span class="setting"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pages navbar-through">
+            <div data-page="index-3" class="page">
+                <div class="page-content style-page-background" style="background-color: #fff;">
+                    <div id="taskTodo" class="accordion-item" style="margin-top: 0px;margin-bottom: 20px">
+                        <!--<div class="row item-inner" style="margin-left: 4%;margin-top: 2%;">-->
+                            <!--<div class="col-80" style="height: 44px;">-->
+                                <!--<img src="images/workTodo/employeeExamination.png"-->
+                                     <!--style="width: 20px;height: 20px;vertical-align:-webkit-baseline-middle">-->
+                                <!--<span id="detail_title" class="item-title"-->
+                                      <!--style="font-size: 16px;color: black;font-weight: bold;vertical-align:-webkit-baseline-middle;margin-left: 10px">每周一考</span>-->
+                            <!--</div>-->
+                            <!--<div class="col-20" style="height: 44px;text-align: center;position: relative">-->
+                                <!--<img src="images/exam/iconButton.png"-->
+                                     <!--style="height: 16px;vertical-align:-webkit-baseline-middle">-->
+                                <!--<div id="todoCountLevel" style="background-image: url('images/workTodo/backgroundCount.png');background-size: 100% 100%;position: absolute;top: 2%;left: 36%;min-width: 40%;color: white;display: none;"></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--更多-->
+    <div id="view-4" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div id="navbar4" class="navbar style-navbar-background">
+            <div class="navbar-inner">
+                <div class="left" style="">
+                    <a id="main_navbar_back4" href="#" class="link" style="margin-left:5px;opacity: 0">
+                        <i class="icon icon-back"></i>
+                        <span class="style-navbar-icon">返回</span>
+                    </a>
+                </div>
+                <div id="main_navbar_title4" class="sliding center style-common-text" style="font-weight:400">更多</div>
+                <div id="main_navbar_menu4" class="right">
+                    <a id="logoutBtn" href="#" class="link" style="">
+                        <span style="font-size: 14px;color: #524e4e;">安全退出</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pages navbar-through" id="collectPage">
+            <div data-page="index-4" class="page">
+                <div class="page-content style-page-background">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--导航（底部）-->
+    <div id="toolbar" class="toolbar tabbar tabbar-labels style-toolbar-inner-background">
+        <div class="toolbar-inner">
+            <a href="#" id="tabView1" class="tab-link active">
+                <i class="icon tabbar-demo-icon-1"></i>
+                <span class="tabbar-label">首页</span>
+            </a>
+            <a href="#" id="tabView2" class="tab-link">
+                <i class="icon tabbar-demo-icon-2"></i>
+                <span class="tabbar-label">学习</span>
+            </a>
+            <a href="#" id="tabView3" class="tab-link">
+                <i class="icon tabbar-demo-icon-3">
+                    <!--<span class="badge bg-red">4</span>-->
+                </i>
+                <div>
+                    <!--<img src="" style="width: 6%;height: 50%;position: fixed;top: 0px;left: 63%;">-->
+                    <span id="todoCount" style="background-image: url('images/workTodo/backgroundCount.png');background-size: 100% 100%;color: white;position: fixed;top: 0px;left: 64%;text-align: center;min-width: 6%;display: none;"></span>
+                </div>
+                <span class="tabbar-label">待办</span>
+            </a>
+            <a href="#" id="tabView4" class="tab-link">
+                <i class="icon tabbar-demo-icon-4"></i>
+                <span class="tabbar-label">更多</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+
+<!--库引用-->
+<script type="text/javascript" src="vendor/jquery/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="vendor/jquery/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="vendor/jquery/js/jquery.transit.min.js"></script>
+<script type="text/javascript" src="vendor/highcharts/js/highcharts.js"></script>
+<script type="text/javascript" src="vendor/highcharts/js/highcharts-more.js"></script>
+<script type="text/javascript" src="vendor/highcharts/js/highcharts-3d.js"></script>
+<script type="text/javascript" src="vendor/highcharts/js/solid-gauge.js"></script>
+<script type="text/javascript" src="vendor/framework7/js/framework7.min.js"></script>
+
+<script type="text/javascript" src="vendor/interact/js/interact.min.js"></script>
+<script type="text/javascript" src="vendor/calculatorjs/dist/calc.min.js"></script>
+<script type="text/javascript" src="vendor/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="vendor/async/async.min.js"></script>
+<script src="vendor/cryptoJS/components/core.js"></script>
+<script src="vendor/cryptoJS/components/enc-base64.js"></script>
+<script src="vendor/cryptoJS/components/md5.js"></script>
+<!--主程序-->
+<script type="text/javascript" src="js/constants.js"></script>
+<script type="text/javascript" src="js/appOp.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/mbiManager.js"></script>
+<script type="text/javascript" src="js/netManager.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/mbiStyle.js"></script>
+<script type="text/javascript" src="js/watch.js"></script>
+<!--页面-->
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/portal.js"></script>
+<script type="text/javascript" src="js/page/login.js"></script>
+<script type="text/javascript" src="js/page/complianceExaminationList.js"></script>
+<script type="text/javascript" src="js/page/studyAutoPerson.js"></script>
+<script type="text/javascript" src="js/page/studyTaskLearning.js"></script>
+<script type="text/javascript" src="js/page/weekExamList.js"></script>
+<script type="text/javascript" src="js/page/weekExamContent.js"></script>
+<script type="text/javascript" src="js/page/historicalResultsList.js"></script>
+<script type="text/javascript" src="js/page/unifiedExaminationList.js"></script>
+<script type="text/javascript" src="js/page/unifiedExaminationDetail.js"></script>
+<script type="text/javascript" src="js/page/unifiedExaminationDetailResult.js"></script>
+<script type="text/javascript" src="js/page/unifiedExamResultDetail.js"></script>
+<script type="text/javascript" src="js/page/weekExamContentResult.js"></script>
+<script type="text/javascript" src="js/page/weekExamContentResultQuery.js"></script>
+<script type="text/javascript" src="js/page/studyTaskLearningDatail.js"></script>
+<script type="text/javascript" src="js/page/internalRegulationList.js"></script>
+<script type="text/javascript" src="js/page/vedioLearn.js"></script>
+<script type="text/javascript" src="js/page/vedioLearnDetail.js"></script>
+<script type="text/javascript" src="js/page/studyTaskYearList.js"></script>
+<script type="text/javascript" src="js/page/internalRegulationDetail.js"></script>
+<script type="text/javascript" src="js/page/foreginRegulationLearn.js"></script>
+<script type="text/javascript" src="js/page/foreginRegulationDetail.js"></script>
+<script type="text/javascript" src="js/page/examQuestionLearn.js"></script>
+<script type="text/javascript" src="js/page/examQuestionDetail.js"></script>
+<script type="text/javascript" src="js/page/workTodoList.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function(){
+        var viewHeight = $("#view-1").outerHeight();
+        $("#imageContent").css("height",viewHeight*0.1);
+//        $("#seclectTime").css("height",viewHeight*0.1*0.5);
+        $("#imageViewContent").css("height",viewHeight*0.1);
+        $("#firstContent").css("height",viewHeight*0.4);
+        $("#secondContent").css("height",viewHeight*0.5);
+        $("#threeContent").css("height",viewHeight*0.34);
+        $("#fourContent").css("height",viewHeight*0.4);
+        if(platform !== "pc"){
+            var checkLoadInterval = setInterval(checkLoad,333);
+            function checkLoad(){
+                if(isLoadAppConfig){
+                    clearInterval(checkLoadInterval);
+                    Portal.initPortal();
+                }
+            }
+        }else{
+            Portal.initPortal();
+        }
+    });
+</script>
